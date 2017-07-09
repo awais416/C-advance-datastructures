@@ -312,7 +312,7 @@ int main()
     cout<<endl;
     LevelOrder_traversal(root);
     cout<<endl;
-    int A[]={13,1,4,2,6,8,5,3,9,10,11,12,7};
+    int A[]={1,4,2,6,8,5,3,9,10,11,12,7};
 
 
     int N = sizeof(A)/sizeof(A[0]);
