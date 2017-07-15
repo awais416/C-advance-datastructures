@@ -277,6 +277,22 @@ void MergeSort(int *A,int N){
 
 }
 
+int binary_search1(int a[],int length,int search_num){
+    int start=0;
+    int end_arr=length-1;
+
+    while(start<=end_arr){
+        int mid=(start+end_arr)/2;
+        if (search_num==a[mid])
+            return a[mid];
+
+        else if(search_num<a[mid])
+            end_arr=mid-1;
+
+        else start=mid+1;
+    }
+    return -1;
+}
 
 
 
@@ -319,6 +335,10 @@ int main()
     MergeSort(A,N);
     for(int i = 0;i <N;i++)
         cout<<A[i];
+    cout<<endl;
+    int B[]={2,4,6,8,9,10,13,18,22};
+    int n=sizeof(B)/sizeof(B[0]);
+    cout<<binary_search1(B,n,6);
 
     return 0;
 }
